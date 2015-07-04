@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>仿蚂蜂窝</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- jquery文件放在自己的js文件前面，要不然自己的函数不起作用 -->
+	<script type="text/javascript" src="jquery/jquery-1.4.js"></script>
+	<script type="text/javascript" src="js/mafengwo.js"></script>
+	<script type="text/javascript">
+	// 	$(document).ready(function(){
+	// 	  $(".more a").click(function(){
+	// 	  $(".contentDisplay").toggle();
+	// 	  });
+	// 	});
+	</script>
+
+</head>
+<body>
+	<header>
+		<a href="#" class="logo"></a>
+		<a href="#" class="mascot"></a>
+		<div id="head">
+			<div id="search">
+				<input class="search-info" type="text" placeholder="搜目的地/攻略/酒店/用户">
+				<input class="search-submit" type="submit" value="">
+			</div>
+			<ul class="loginType">
+				<li class="five">
+					<a href="#" class="login">登录</a>
+					<a href="#" class="login">注册</a>
+					<a href="#" class="login-qq">QQ登录</a>
+					<a href="#" class="login-wb">微博登录</a>
+					<a href="#" class="login-ren">人人网登录</a>
+				</li>
+				<li class="more">
+					<a href="#" class="login-more">
+						更多<span class="triangle"></span>
+					</a>
+				</li>
+			</ul>
+			<!-- 目前存在的问题：当hover时，li变色，但不响应事件，只有点到a才可以 -->
+			<ul class="drop-bd">
+				<li><a href="">MSN登录</a></li>
+				<li><a href="">开心网登录</a></li>
+				<li><a href="">搜狐微博登录</a></li>
+			</ul>
+
+		</div>
+	</header>
+	<nav>
+		<div class="nav-div-1">
+			<div class="navigation">
+				<div id="fastGPS">快速导航</div>
+				<div class="nav-all">
+					<div class="TopHot">
+						TOP热点
+						
+					</div>
+					<hr class="navigation-hr">
+					<div class="FreeProduct">
+						超值自由行产品
+						
+					</div>
+					<hr class="navigation-hr">
+					<div class="HotDesti">
+						当季热门目的地
+						
+					</div>
+					<hr class="navigation-hr">
+					<div class="innerDesti">
+						国内旅游目的地
+						
+					</div>
+					<hr class="navigation-hr">
+					<div class="outDesti">
+						出境旅游目的地
+						
+					</div>
+					<hr class="navigation-hr">
+					<div class="nearDesti">
+						周边游目的地
+					
+					</div>
+					<hr class="navigation-hr">
+					<div class="service">
+						出行服务
+						
+					</div>
+					<hr class="navigation-hr">
+					<div class="mobileApp">
+						手机app
+
+					</div>
+					
+				</div>
+			</div>
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">旅游攻略</a></li>
+				<li><a href="#">目的地</a></li>
+				<li><a href="#">问答</a></li>
+				<li class="navHotel">
+					<a href="#" class="hotelA">酒店预订</a>
+					<div class="hotelDetail">
+						<div class="top">
+							<ul>
+								<li><a href="">台中</a></li>
+								<li><a href="">高雄</a></li>
+								<li><a href="">花莲</a></li>
+								<li><a href="">垦丁</a></li>
+								<li><a href="">首尔</a></li>
+								<li><a href="">香港</a></li>
+								<li><a href="">东京</a></li>
+								<li><a href="">巴黎</a></li>
+								<li><a href="">曼谷</a></li>
+								<li><a href="">清迈</a></li>
+								<li><a href="">普吉岛</a></li>
+								<li><a href="">拜县</a></li>
+								<li><a href="">巴厘岛</a></li>
+								<li><a href="">圣托里尼</a></li>
+								<li><a href="">大阪</a></li>
+								<li><a href="">威尼斯</a></li>
+							</ul>
+
+						</div>
+						<div class="middle">
+							<a href="">去全部目的地&gt&gt</a>
+						</div>
+						<div class="bottom">
+							<img src="img/hotelLogo.jpg">
+							<p>住对了酒店，去对了目的地</p>
+						</div>
+					</div>
+				</li>
+				<li class="freeNav">
+					<a href="#">
+						自由行
+						<i class="NEW"><img src="img/new.jpg"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="content">
+		<!-- 中间主要部分 -->
+		<article>
+			<!-- 图片展示 -->
+			<div class="showPic">
+				<div class="play">
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/show1.jpeg">
+							</a>
+							<div class="info">
+								图片来自于XXX1,此目的地共收藏了XXX张XXX图片。本片由XXX荣誉出品！XXXXXXXXXXXXXXXXXXXXXX
+							</div>
+						</li>
+						<li >
+							<a href="#">
+								<img src="img/show2.jpeg">
+							</a>
+							<div class="info">
+								图片来自于XXX2,此目的地共收藏了XXX张XXX图片。本片由XXX荣誉出品！
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/show3.jpeg">
+							</a>
+							<div class="info">
+								图片来自于XXX3,此目的地共收藏了XXX张XXX图片。本片由XXX荣誉出品！
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/show4.jpeg">
+							</a>
+							<div class="info">
+								图片来自于XXX4,此目的地共收藏了XXX张XXX图片。本片由XXX荣誉出品！
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/show5.jpeg">
+							</a>
+							<div class="info">
+								图片来自于XXX5,此目的地共收藏了XXX张XXX图片。本片由XXX荣誉出品！
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="tab">
+					<ul>
+						<li class="on" data-id="1">
+							
+							<a href="#"><img src="img/tab1.jpeg"></a>
+						</li>
+						<li class="" data-id="2">
+							
+							<a href="#"><img src="img/tab2.jpeg"></a>
+						</li>
+						<li class="" data-id="3">
+							
+							<a href="#"><img src="img/tab3.jpeg"></a>
+						</li>
+						<li class="" data-id="4">
+							
+							<a href="#"><img src="img/tab4.jpeg"></a>
+						</li>
+						<li class="" data-id="5">
+							
+							<a href="#"><img src="img/tab5.jpeg"></a>
+						</li>
+					</ul>
+					<a href="#">
+						<img  class="lili"src="img/lili.jpg">
+					</a>
+				</div>
+			</div>
+			<div class="secret">
+				<a href=""><img src="img/secret.jpeg"></a>
+			</div>
+			<!-- 游记一行 -->
+			<div class="travelDiary">
+				<h2>游记</h2>
+				<a href="#">+发表新游记</a>
+			</div>
+			<hr>
+			<!-- 游记tab -->
+			<div class="hd">
+				<ul>
+					<li class="on">
+						<a href="#">热门游记</a>
+					</li>
+					<li >
+						<a href="#">最新发表</a>
+					</li>
+					<li >
+						<a href="#">精品游记</a>
+					</li>
+					<li >
+						<a href="#">一周热榜</a>
+					</li>
+				</ul>
+				<div id="whatPrecious">
+					<a href="#">什么是目的地宝藏？</a>
+				</div>
+			</div>
+			<!-- 游记筛选条件 -->
+
+			<div id="select">
+				<div id="selectContent">
+					<div class="conditionSelect">
+						<strong>按时间：</strong>
+						<p>
+							<a href="#">不限</a>
+							<a href="#">1-2月</a>
+							<a href="#">3-4月</a>
+							<a href="#">5-6月</a>
+							<a href="#">7-8月</a>
+							<a href="#">9-10月</a>
+							<a href="#">11-12月</a>
+						</p>
+					</div>
+					<div class="conditionSelect contentDisplay">
+						<strong>按人均费用：</strong>
+						<p>
+							<a href="#">不限</a>
+							<a href="#">1-999</a>
+							<a href="#">1000-5999</a>
+							<a href="#">6000-20000</a>
+							<a href="#">20000以上</a>
+						</p>
+					</div>
+					<div class="conditionSelect contentDisplay">
+						<strong>按人物：</strong>
+						<p>
+							<a href="#">不限</a>
+							<a href="#">一个人</a>
+							<a href="#">小两口</a>
+							<a href="#">带小孩</a>
+							<a href="#">家族出游</a>
+							<a href="#">和朋友</a>
+							<a href="#">其它</a>
+						</p>
+					</div>
+					<div class="conditionSelect contentDisplay">
+						<strong>按形式：</strong>
+						<p>
+							<a href="#">不限</a>
+							<a href="#">自由行</a>
+							<a href="#">半自由行</a>
+							<a href="#">跟团</a>
+							<a href="#">自驾</a>
+							<a href="#">包车</a>
+							<a href="#">骑行</a>
+							<a href="#">徒步</a>
+						</p>
+					</div>
+					<div class="more">
+						<a  >更多筛选条件</a>
+					</div>
+				</div>
+				
+			</div>
+			<!-- 内容展示 -->
+			<div id="contentFull">
+				<ul id="contentUl">
+
+					<!-- 第1条 -->
+					<li>
+						<!-- 最左边图像 -->
+						<div class="contentPic">
+							<img src="img/pic1.jpeg" class="pic1">
+						</div>
+						<!-- 中间内容 -->
+						<div class="contentDescrip">
+							<a href="#"><h2 class="title">也许是史上照片最多的日本游记（2012）</h2></a>
+							<p class="person">
+								<span class="author">
+									<a href="#">
+										<img src="img/person1.jpeg" class="pic2">
+									</a>
+									作者：
+									<a href="#" class="name">华英父子</a>
+								</span>
+								<span class="reply">
+									<a href="#">
+										<img src="img/person2.jpeg" class="pic3">
+									</a>
+									回复：
+									<a href="#" class="name">Kin在雨</a>
+								</span>
+								<span class="date">2015-06-15 09:19</span>
+							</p>
+							<p class="desp">2014年12月4日至12月14日，第二次去了日本。 从拿到自由行签证的那一天起，脑海里便无数次的开始想象这次行程里的种种画面，也在想象该当世界都在变快，只有 台北 慢了下来。 仿佛正在安慰一个天真却笨拙的孩子：不着急，你慢慢走。 （只想看行程的可以跳过）首先</p>
+						</div>
+						<!-- 最右侧内容 -->
+						<div class="num">
+							<p class="readReply">
+								<a href="#">11924/117</a>
+							</p>
+							<a href="#"><img src="img/ding.jpg"></a>
+							<p class="ding">360</p>
+						</div>
+					</li>
+
+<!-- 第2条 -->
+					<li>
+						<!-- 最左边图像 -->
+						<div class="contentPic">
+							<img src="img/pic1.jpeg" class="pic1">
+						</div>
+						<!-- 中间内容 -->
+						<div class="contentDescrip">
+							<a href="#"><h2 class="title">也许是史上照片最多的日本游记（2012）</h2></a>
+							<p class="person">
+								<span class="author">
+									<a href="#">
+										<img src="img/person1.jpeg" class="pic2">
+									</a>
+									作者：
+									<a href="#" class="name">华英父子</a>
+								</span>
+								<span class="reply">
+									<a href="#">
+										<img src="img/person2.jpeg" class="pic3">
+									</a>
+									回复：
+									<a href="#" class="name">Kin在雨</a>
+								</span>
+								<span class="date">2015-06-15 09:19</span>
+							</p>
+							<p class="desp">2014年12月4日至12月14日，第二次去了日本。 从拿到自由行签证的那一天起，脑海里便无数次的开始想象这次行程里的种种画面，也在想象该当世界都在变快，只有 台北 慢了下来。 仿佛正在安慰一个天真却笨拙的孩子：不着急，你慢慢走。 （只想看行程的可以跳过）首先</p>
+						</div>
+						<!-- 最右侧内容 -->
+						<div class="num">
+							<p class="readReply">
+								<a href="#">11924/117</a>
+							</p>
+							<a href="#"><img src="img/ding.jpg"></a>
+							<p class="ding">360</p>
+						</div>
+					</li>
+
+<!-- 第3条 -->
+					<li>
+						<!-- 最左边图像 -->
+						<div class="contentPic">
+							<img src="img/pic1.jpeg" class="pic1">
+						</div>
+						<!-- 中间内容 -->
+						<div class="contentDescrip">
+							<a href="#"><h2 class="title">也许是史上照片最多的日本游记（2012）</h2></a>
+							<p class="person">
+								<span class="author">
+									<a href="#">
+										<img src="img/person1.jpeg" class="pic2">
+									</a>
+									作者：
+									<a href="#" class="name">华英父子</a>
+								</span>
+								<span class="reply">
+									<a href="#">
+										<img src="img/person2.jpeg" class="pic3">
+									</a>
+									回复：
+									<a href="#" class="name">Kin在雨</a>
+								</span>
+								<span class="date">2015-06-15 09:19</span>
+							</p>
+							<p class="desp">2014年12月4日至12月14日，第二次去了日本。 从拿到自由行签证的那一天起，脑海里便无数次的开始想象这次行程里的种种画面，也在想象该当世界都在变快，只有 台北 慢了下来。 仿佛正在安慰一个天真却笨拙的孩子：不着急，你慢慢走。 （只想看行程的可以跳过）首先</p>
+						</div>
+						<!-- 最右侧内容 -->
+						<div class="num">
+							<p class="readReply">
+								<a href="#">11924/117</a>
+							</p>
+							<a href="#"><img src="img/ding.jpg"></a>
+							<p class="ding">360</p>
+						</div>
+					</li>
+<!-- 第4条 -->
+					<li>
+						<!-- 最左边图像 -->
+						<div class="contentPic">
+							<img src="img/pic1.jpeg" class="pic1">
+						</div>
+						<!-- 中间内容 -->
+						<div class="contentDescrip">
+							<a href="#"><h2 class="title">也许是史上照片最多的日本游记（2012）</h2></a>
+							<p class="person">
+								<span class="author">
+									<a href="#">
+										<img src="img/person1.jpeg" class="pic2">
+									</a>
+									作者：
+									<a href="#" class="name">华英父子</a>
+								</span>
+								<span class="reply">
+									<a href="#">
+										<img src="img/person2.jpeg" class="pic3">
+									</a>
+									回复：
+									<a href="#" class="name">Kin在雨</a>
+								</span>
+								<span class="date">2015-06-15 09:19</span>
+							</p>
+							<p class="desp">2014年12月4日至12月14日，第二次去了日本。 从拿到自由行签证的那一天起，脑海里便无数次的开始想象这次行程里的种种画面，也在想象该当世界都在变快，只有 台北 慢了下来。 仿佛正在安慰一个天真却笨拙的孩子：不着急，你慢慢走。 （只想看行程的可以跳过）首先</p>
+						</div>
+						<!-- 最右侧内容 -->
+						<div class="num">
+							<p class="readReply">
+								<a href="#">11924/117</a>
+							</p>
+							<a href="#"><img src="img/ding.jpg"></a>
+						<p class="ding">360</p>
+						</div>
+					</li>
+
+<!-- 第5条 -->
+					<li>
+						<!-- 最左边图像 -->
+						<div class="contentPic">
+							<img src="img/pic1.jpeg" class="pic1">
+						</div>
+						<!-- 中间内容 -->
+						<div class="contentDescrip">
+							<a href="#"><h2 class="title">也许是史上照片最多的日本游记（2012）</h2></a>
+							<p class="person">
+								<span class="author">
+									<a href="#">
+										<img src="img/person1.jpeg" class="pic2">
+									</a>
+									作者：
+									<a href="#" class="name">华英父子</a>
+								</span>
+								<span class="reply">
+									<a href="#">
+										<img src="img/person2.jpeg" class="pic3">
+									</a>
+									回复：
+									<a href="#" class="name">Kin在雨</a>
+								</span>
+								<span class="date">2015-06-15 09:19</span>
+							</p>
+							<p class="desp">2014年12月4日至12月14日，第二次去了日本。 从拿到自由行签证的那一天起，脑海里便无数次的开始想象这次行程里的种种画面，也在想象该当世界都在变快，只有 台北 慢了下来。 仿佛正在安慰一个天真却笨拙的孩子：不着急，你慢慢走。 （只想看行程的可以跳过）首先</p>
+						</div>
+						<!-- 最右侧内容 -->
+						<div class="num">
+							<p class="readReply">
+								<a href="#">11924/117</a>
+							</p>
+							<a href="#"><img src="img/ding.jpg"></a>
+							<p class="ding">360</p>
+						</div>
+					</li>
+
+<!-- 第6条 -->
+					<li>
+						<!-- 最左边图像 -->
+						<div class="contentPic">
+							<img src="img/pic1.jpeg" class="pic1">
+						</div>
+						<!-- 中间内容 -->
+						<div class="contentDescrip">
+							<a href="#"><h2 class="title">也许是史上照片最多的日本游记（2012）</h2></a>
+							<p class="person">
+								<span class="author">
+									<a href="#">
+										<img src="img/person1.jpeg" class="pic2">
+									</a>
+									作者：
+									<a href="#" class="name">华英父子</a>
+								</span>
+								<span class="reply">
+									<a href="#">
+										<img src="img/person2.jpeg" class="pic3">
+									</a>
+									回复：
+									<a href="#" class="name">Kin在雨</a>
+								</span>
+								<span class="date">2015-06-15 09:19</span>
+							</p>
+							<p class="desp">2014年12月4日至12月14日，第二次去了日本。 从拿到自由行签证的那一天起，脑海里便无数次的开始想象这次行程里的种种画面，也在想象该当世界都在变快，只有 台北 慢了下来。 仿佛正在安慰一个天真却笨拙的孩子：不着急，你慢慢走。 （只想看行程的可以跳过）首先</p>
+						</div>
+						<!-- 最右侧内容 -->
+						<div class="num">
+							<p class="readReply">
+								<a href="#">11924/117</a>
+							</p>
+							<a href="#"><img src="img/ding.jpg"></a>
+						<p class="ding">360</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+
+			<!-- 分页 -->
+			<div id="page">
+				<ul>
+					<li class="prevNext"> <a href="#">&lt&lt prev   </a></li>
+					<li class="number"><a href="#">1</a></li>
+					<li class="number"><a href="#">2</a></li>
+					<li class="number"><a href="#">3</a></li>
+					<li class="number"><a href="#">4</a></li>
+					<li class="number"><a href="#">5</a></li>
+					<li class="number"><a href="#">6</a></li>
+					<li class="number"><a href="#">7</a></li>
+					<li class="number"><a href="#">8</a></li>
+					<li class="number"><a href="#">9</a></li>
+					<li class="number"><a href="#">...</a></li>
+					<li class="prevNext"> <a href="#"> next &gt&gt </a></li>
+
+				</ul>
+
+			</div>
+
+		</article>
+
+		<!-- 左侧边 -->
+		<aside>
+			<!-- 酒店预订 -->
+			<div id="hotelBook">
+				<p class="hotelTitle">酒店预订</p>
+				<div class="hotelInput">
+					<input type="text" placeholder="目的地/城市/酒店">
+				</div>
+				<p class="search">
+					入住&nbsp
+					<a href="#"><img src="img/date.jpg"></a>
+					离店&nbsp
+					<a href="#"><img src="img/date.jpg"></a>
+					<button>搜索</button>
+				</p>
+			</div>
+
+			<!-- 旅行家专栏 -->
+			<div id="traveler">
+				<p class="title">
+					<span class="left"><a href="#">旅行家专栏</a></span>
+					<span class="right"><a href="#">专栏首页&gt</a></span>
+				</p>
+				<div class="pic">
+					<ul class="picUl">
+						<li class="on">
+							<dl>
+								<dt><a href="#"><img src="img/traveler1.jpeg"></a></dt>
+								<dd>
+									<a href="#">
+										<h3>占地之旅，本想利比亚的革命高潮</h3>
+									</a>
+									<p>未来的一切都是不确定的。我能想到的最佳办法就是行动，谁知道边境今天开不开，又或者明天会不会关闭？开了又让不让外国记者过去？这个我能想到的最佳办法就是行动，谁知道边境今天开不开.</p>
+								</dd>
+							</dl>
+							
+						</li>
+						<li class="">
+							<dl>
+								<dt><a href="#"><img src="img/traveler2.jpeg"></a></dt>
+								<dd>
+									<a href="#">
+										<h3>山河寂静，为何唢呐为我齐奏</h3>
+									</a>
+									<p>16世纪的时候西班牙有一个国王来自奥地利，他建了这些楼。他觉得白天的白楼像奥地利的雪山反射着阳光，晚上它们就变成像星星一样的镜</p>
+								</dd>
+							</dl>
+							
+						</li>
+						<li class="">
+							<dl>
+								<dt>
+									<a href="#"><img src="img/traveler3.jpeg"></a>
+									
+								</dt>
+								<dd>
+									<a href="#">
+										<h3>从延安到京城</h3>
+									</a>
+									<p>未来的一切都是不确定的。我能想到的最佳办法就是行动，谁知道边境今天开不开，又或者明天会不会关闭？开了又让不让外国记者过去？这个</p>
+								</dd>
+							</dl>
+							
+						</li>
+						<li class="">
+							<dl>
+								<dt>
+									<a href="#"><img src="img/traveler4.jpeg"></a>
+									
+								</dt>
+								<dd>
+									<a href="#">
+										<h3>这里，有小野洋子出没</h3>
+									</a>
+									<p>在过去，城市的任何一个街角都能找到卡扎菲的画像、海报，甚至在地毯上也有。作为领袖，卡扎菲似乎不在意人们踩在他脸上，他更关注曝光</p>
+								</dd>
+							</dl>
+							
+						</li>
+						<li class="">
+							<dl>
+								<dt>
+									<a href="#"><img src="img/traveler5.jpeg"></a>
+									
+								</dt>
+								<dd>
+									<a href="#">
+										<h3>为什么马德里满是白色的房子</h3>
+									</a>
+									<p>那里有二十元一杯的清咖和安静的小野洋子，吧台上还誊写着汪国真的诗歌。这间客栈的房价要比其他家贵出一截，客流以内地文艺中年为</p>
+								</dd>
+							</dl>
+							
+						</li>
+					</ul>
+				</div>
+				<ul class="blockUl">
+					<li class="on" data-id="0"></li>
+					<li data-id="1"></li>
+					<li data-id="2"></li>
+					<li data-id="3"></li>
+					<li data-id="4"></li>
+				</ul>
+			</div>
+			<!-- 旅游攻略推荐 -->
+			<div id="strategy">
+				<!-- 标题 -->
+				<p class="title">
+					<span class="left">旅游攻略推荐</span>
+					<span class="right"><a href="">更多&gt</a></span>
+				</p>
+				<!-- 中间介绍 -->
+				<div class="desc">
+					<a href="#"><img src="img/tokyo.jpeg"></a>
+					<dl>
+						<dt><a href="#"><h1>东京周边</h1></a></dt>
+						<dd>详细的吃、住、行、景点、线路、实用信息</dd>
+						<a href="#" class="download">下载</a>
+					</dl>
+				</div>
+				<!-- 点评 -->
+				<!-- 一开始没有设计好，应该用li -->
+				<div class="review">
+					<p>
+						<a href="">&nbsp<b>哎呦</b>&nbsp</a>
+						点评了:
+						<a href="">&nbsp<b class="author">永济</b>&nbsp</a>
+						的
+						<a href="">&nbsp<b>深潭大峡谷</b>&nbsp</a>
+					</p>
+					<p>
+						<a href="">&nbsp<b>哎呦</b>&nbsp</a>
+						点评了:
+						<a href="">&nbsp<b class="author">永济</b>&nbsp</a>
+						的
+						<a href="">&nbsp<b>深潭大峡谷</b>&nbsp</a>
+					</p>
+					<p>
+						<a href="">&nbsp<b>哎呦</b>&nbsp</a>
+						点评了:
+						<a href="">&nbsp<b class="author">永济</b>&nbsp</a>
+						的
+						<a href="">&nbsp<b>深潭大峡谷</b>&nbsp</a>
+					</p>
+					<p>
+						<a href="">&nbsp<b>哎呦</b>&nbsp</a>
+						点评了:
+						<a href="">&nbsp<b class="author">永济</b>&nbsp</a>
+						的
+						<a href="">&nbsp<b>深潭大峡谷XXXXXXXXXXXXXXX</b>&nbsp</a>
+					</p>
+					<p>
+						<a href="">&nbsp<b>哎呦</b>&nbsp</a>
+						点评了:
+						<a href="">&nbsp<b class="author">永济</b>&nbsp</a>
+						的
+						<a href="">&nbsp<b>深潭大峡谷</b>&nbsp</a>
+					</p>
+
+				</div>
+			</div>
+			<!-- 手机应用 -->
+			<div id="application">
+				<p class="title">
+					<span class="left"><a href="">手机应用</a></span>
+				</p>
+				<div class="type">
+					<div class="type1">
+						<a href=""><img src="img/type1.png"></a>
+						<dl>
+							<dt><a href="">旅游攻略</a></dt>
+							<dd>为旅行爱好者提供精彩的旅行攻略。</dd>
+						</dl>
+					</div>
+					<div class="type1">
+						<a href=""><img src="img/type2.png"></a>
+						<dl>
+							<dt><a href="">蚂蜂窝自由行</a></dt>
+							<dd>超值旅行随心订</dd>
+						</dl>
+					</div>
+					<div class="type1">
+						<a href=""><img src="img/type3.png"></a>
+						<dl>
+							<dt><a href="">嗡嗡</a></dt>
+							<dd>你的足迹是世界的风景</dd>
+						</dl>
+					</div>
+					<div class="type1">
+						<a href=""><img src="img/type4.png"></a>
+						<dl>
+							<dt><a href="">旅行翻译官</a></dt>
+							<dd>旅行必备，让您的手机开口说话。</dd>
+						</dl>
+					</div>
+					<div class="type1">
+						<a href=""><img src="img/type5.png"></a>
+						<dl>
+							<dt><a href="">游记</a></dt>
+							<dd>旅行中的灵感收集器</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<!-- 汽车广告 -->
+			<div id="carAdvertisement">
+				<a href=""><img src="img/korea.jpeg"></a>
+			</div>
+			<!-- 撒野行动 -->
+			<div id="widly">
+				<p class="title">
+					<span class="left">2015撒野行动</span>
+					<span class="right"><a href="">查看全部&gt</a></span>
+				</p>
+				<div class="img">
+					<a href=""><img src="img/widly.jpg"></a>
+				</div>
+			</div>
+			<!-- 我的活动 -->
+			<div id="activity">
+				<p class="title">
+					<span class="left">我的活动</span>
+					<span class="right"><a href="">正在进行</a></span>
+				</p>
+				<div class="contain">
+					<a href="" class="no1">
+						<strong>蚂蜂窝吉祥物征集</strong>
+						<br>
+						24万元上传奖+40万元投票奖！
+					</a>
+					<a href="" class="no2">
+						<strong>照片PK</strong>
+						<br>
+						旅行照片，别藏着！分享一下
+					</a>
+					<a href="" class="no3">
+						<strong>金币拍卖行</strong>
+						<br>
+						每周二：用金币换精美实物奖品
+					</a>
+					<a href="" class="no4">
+						<strong>旅行电台</strong>
+						<br>
+						边听歌边逛蚂蜂窝
+					</a>
+					<a href="" class="no5">
+						<strong>欧珀莱互动赢基金</strong>
+						<br>
+						采撷阳光积分，活力自由行！
+					</a>
+					<a href="" class="no6">
+						<strong>东航航空虚拟航班</strong>
+						<br>
+						打卡升舱免费去澳洲！
+					</a>
+					<a href="" class="no7">
+						<strong>云台山摄影学院</strong>
+						<br>
+						在美景中GET新技能！
+					</a>
+				</div>
+			</div>
+			<!-- 旅游网站 -->
+			<div id="website">
+				<p class="title">
+					<span class="left">蚂蜂窝<a href="">旅行网站</a>最新进展</span>
+				</p>
+				<ul>
+					<li>05月27日&nbsp <a href="">首期1蜂蜜众筹大奖</a></li>
+					<li>04月29日&nbsp <a href="">蚂蜂窝吉祥物全站征集！</a></li>
+					<li>03月25日&nbsp <a href="">蚂蜂窝.自由行发布会召开</a></li>
+				</ul>
+			</div>
+		</aside>
+		<!-- 最下面一张图片 -->
+		<div id="bottomPic">
+			<a href="">
+				<img src="img/bottom.jpeg">
+			</a>
+		</div>
+	</div>
+	<footer>
+		<div class="content">
+			<div class="top">
+				<dl class="web">
+					<dt>中国最大的旅游社交网站</dt>
+					<dd>覆盖全球200多个国家和地区</dd>
+					<dd><span>50,000,000</span>位旅行者</dd>
+					<dd><span>720,000</span>家国际酒店</dd>
+					<dd><span>16,000,000</span>条真实点评</dd>
+					<dd><span>267,000,000</span>次攻略下载</dd>
+				</dl>
+				<dl class="about">
+					<dt>关于我们</dt>
+					<dd><a href="">关于蚂蜂窝</a></dd>
+					<dd><a href="">招商与合作</a></dd>
+					<dd><a href="">网络信息侵权通知指引</a></dd>
+					<dd><a href="">隐私政策</a></dd>
+					<dd><a href="">服务政策</a></dd>
+					<dd><a href=""><span>加入蚂蜂窝</span></a></dd>
+				</dl>
+				<dl class="service">
+					<dt>旅行服务</dt>
+					<dd>
+						<ul>
+							<li><a href="">旅游攻略</a></li>
+							<li><a href="">酒店预订</a></li>
+							<li><a href="">旅游特价</a></li>
+							<li><a href="">国际租车</a></li>
+							<li><a href="">旅游问答</a></li>
+							<li><a href="">旅游保险</a></li>
+							<li><a href="">旅游指南</a></li>
+							<li><a href="">签证办理</a></li>
+							<li><a href="">旅游资讯</a></li>
+							<li><a href="">订火车票</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl class="weixin">
+					<dd class="official">
+						<img src="img/weixin1.jpg">
+						<p>蚂蜂窝官方微信</p>
+					</dd>
+					<dd class="free">
+						<img src="img/weixin2.jpg">
+						<p>蚂蜂窝自由行微博</p>
+					</dd>
+				</dl>
+				<dl class="focus">
+					<dt>关注我们</dt>
+					<dd>
+						<a href=""><img src="img/focus1.jpg"></a>
+						<a href=""><img src="img/focus2.jpg"></a>
+						<a href=""><img src="img/focus3.jpg"></a>
+					</dd>
+				</dl>
+			</div>
+			<div class="middle">
+				<ul>
+					<li><a href="">马可波罗</a></li>
+					<li><a href="">Onlylady女人志</a></li>
+					<li><a href="">艺龙旅游指南</a></li>
+					<li><a href="">欣欣旅游网</a></li>
+					<li><a href="">户外运动</a></li>
+					<li><a href="">酒店网</a></li>
+					<li><a href="">365音乐网</a></li>
+					<li><a href="">百酷特色住宿</a></li>
+					<li><a href="">小说网</a></li>
+					<li><a href="">悠哉旅游网</a></li>
+					<li><a href="">来订吧酒店网</a></li>
+					<li><a href="">游多多自助游</a></li>
+					<li><a href="">火车时刻表</a></li>
+					<li><a href="">机票</a></li>
+					<li><a href="">驴妈妈旅游网</a></li>
+					<li><a href="">好豆美食网</a></li>
+					<li><a href="">二手车</a></li>
+					<li><a href="">绿野户外</a></li>
+					<li><a href="">途牛旅游网</a></li>
+					<li><a href="">图吧</a></li>
+					<li><a href="">SUV联合越野</a></li>
+					<li><a href="">手机浏览器</a></li>
+					<li><a href="">上海地图</a></li>
+					<li><a href="">天气预报查询</a></li>
+					<li><a href="">火车票</a></li>
+					<li><a href="">同程旅游</a></li>
+					<li><a href="">携程旅游</a></li>
+					<li><a href="">旅游</a></li>
+					<li><a href="">TripAdvisor</a></li>
+					<li><a href="">火车时刻表</a></li>
+					<li><a href="">天巡网</a></li>
+					<li><a href="">爱旅行网</a></li>
+					<li><a href="">wed114结婚网</a></li>
+					<li><a href="">酒店预订</a></li>
+					<li><a href="">自在客</a></li>
+					<li><a href="">遨游旅游网</a></li>
+					<li><a href="">手机</a></li>
+					<li><a href="">租租车</a></li>
+					<li><a href="">客运站</a></li>
+					<li><a href="">车讯网</a></li>
+					<li><a href="">旅游网</a></li>
+					<li><a href="">五分旅游网</a></li>
+					<li><a href="">更多友情链接&gt&gt</a></li>
+				</ul>
+			</div>
+			<div class="bottom">
+				<a href=""><img class="left" src="img/mafeng.jpg"></a>
+				<div class="companyInfo">
+					<p>© 2015 Mafengwo.cn <a href="">京ICP备11015476号</a> 京公网安备110105013401号 京ICP证110318号 新出网证(京)字242号</p>
+					<p><span>蚂蜂窝客服</span> 400 166 6866   工作时间 10:00-18:30   <a href=""><span>网站地图</span></a></p>
+				</div>
+				<div class="right">
+					<a href=""><img src="img/site1.jpg"></a>
+					<a href=""><img src="img/site2.jpg"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
